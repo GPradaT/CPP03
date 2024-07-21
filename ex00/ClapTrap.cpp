@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:31:04 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/21 12:09:08 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/21 12:45:07 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,23 @@ ClapTrap::ClapTrap(std::string &name)
 	std::cout << "Parametrized constructor called." << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &src)
+{
+	*this = src;
+}
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << _name << " has been destroyed." << std::endl;
+}
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap &src)
+{
+	this->_name = src._name;
+	this->_hitPoints = src._hitPoints;
+	this->_energyPoints = src._energyPoints;
+	this->_attackDamage = src._attackDamage;
+	return *this;
 }
 
 void	ClapTrap::attack(const std::string& target)
