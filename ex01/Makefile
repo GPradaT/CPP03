@@ -6,13 +6,13 @@
 #    By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/21 10:31:32 by gprada-t          #+#    #+#              #
-#    Updated: 2024/07/21 12:10:56 by gprada-t         ###   ########.fr        #
+#    Updated: 2024/07/22 09:05:11 by gprada-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Aaaaaand...OPEN!
+NAME = SerenaMyLove
 
-SRCS = ClapTrap.cpp main.cpp
+SRCS = ClapTrap.cpp ScavTrap.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 

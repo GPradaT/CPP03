@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:31:04 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/21 12:58:13 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/22 09:39:20 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 ClapTrap::ClapTrap(std::string &name)
 {
-	this->_name = name;
-	_hitPoints = 10;
-	_energyPoints = 10;
-	_attackDamage = 0;
-	std::cout << "Parametrized constructor called." << std::endl;
+	this->_name = "ClapTrap " + name;
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
+	std::cout << "ClapTrap constructor called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &src)
 {
-	std::cout << "Copy constructor called." << std::endl;
+	std::cout << "ClapTrap copy constructor called." << std::endl;
 	*this = src;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << _name << " has been destroyed." << std::endl;
+	std::cout << "ClapTrap has been destroyed." << std::endl;
 }
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &src)
@@ -56,7 +56,7 @@ void	ClapTrap::attack(const std::string& target)
 	}
 	else
 	{
-		std::cout << "ClapTrap " << _name << " attacks " \
+		std::cout << _name << " attacks " \
 		<< target << " causing " << _attackDamage \
 		<< " points of damage!" << std::endl;
 	}
