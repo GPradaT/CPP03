@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 08:26:57 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/22 09:53:46 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/23 11:38:40 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ ScavTrap::ScavTrap(std::string &name) : ClapTrap(name)
 	std::cout << "ScavTrap " + name << " constructor called." << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &src) : SlavTrap(src._sonName)
+ScavTrap::ScavTrap(const ScavTrap &src) : ClapTrap(_sonName)
 {
 	*this = src;
+	std::cout << "ScavTrap copy " + getName() << " successfully copied." << std::endl;
 }
 
 ScavTrap::~ScavTrap()

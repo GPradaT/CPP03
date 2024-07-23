@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:31:16 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/22 09:48:31 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/23 11:36:36 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main(void)
 	firstFather.attack(firstRobot.getName());
 	
 	firstRobot.attack();
-
 	firstRobot.guardGate();
+
+	ScavTrap jimy(firstRobot);
+
+
 	return 0;
 }
