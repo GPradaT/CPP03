@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:31:04 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/23 13:13:16 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/23 14:47:18 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 ClapTrap::ClapTrap(std::string &name)
 {
 	this->_name = name;
-	_hitPoints = 10;
-	_energyPoints = 10;
-	_attackDamage = 0;
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 	std::cout << "ClapTrap " + _name + " constructor called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &src)
 {
-	std::cout << "ClapTrap copy constructor called." << std::endl;
+	std::cout << "ClapTrap " + src._name + " copy constructor called." << std::endl;
 	*this = src;
 }
 
@@ -34,11 +34,16 @@ ClapTrap::~ClapTrap()
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &src)
 {
-	std::cout << "Copy assignement operator used." << std::endl;
+	std::cout << "ClapTrap Copy assignement operator used." << std::endl;
 	this->_name = src._name;
 	this->_hitPoints = src._hitPoints;
 	this->_energyPoints = src._energyPoints;
 	this->_attackDamage = src._attackDamage;
+	std::cout << "Data from source object:" << std::endl;
+	std::cout << src._name << std::endl;
+	std::cout << src._hitPoints << std::endl;
+	std::cout << src._energyPoints << std::endl;
+	std::cout << src._attackDamage << std::endl;
 	std::cout << "Data for new object:" << std::endl;
 	std::cout << _name << std::endl;
 	std::cout << _hitPoints << std::endl;
